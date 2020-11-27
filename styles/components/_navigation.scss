@@ -1,0 +1,52 @@
+.app-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        span {
+            color: var(--grey);
+            font-size: 18px;
+            strong {
+                color: var(--secondary);
+            }
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            margin: 10px 0 20px;
+        }
+        a {
+            font-family: var(--primary-font);
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 20px;
+            color: var(--dark);
+            text-decoration: none;
+            display: block;
+            margin: 0 30px;
+            @media (max-width: 768px) {
+                margin: 0 10px;
+            }
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}
