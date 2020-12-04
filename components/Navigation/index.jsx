@@ -1,12 +1,11 @@
+import { AppLogo } from "../ui/AppLogo";
+
 const Navigation = () => {
     return (
         <header className='app-nav__wrapper'>
             <div className="container">
                 <div className="app-nav">
-                     <div className="app-nav__logo">
-                        <img src="/app_logo.svg" alt="Cash.On"/>
-                        <span>Cash.<strong>On</strong></span>
-                    </div>
+                   <AppLogo />
                     <nav className='app-nav__menu'>
                         <a href="#">About</a>
                         <a href="#features">Features</a>

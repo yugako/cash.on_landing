@@ -1,129 +1,139 @@
 :root {
-    --primary: #1b9cfc;
-    --secondary: #f97f51;
-    --error: darkred;
-  
-    --light: #ffffff;
-    --dark: #242134;
-    --grey: #b3b3b3;
-  
-    --primary-light: #25ccf7;
-    --secondary-light: #8bc34a;
-  
-    --primary-font: 'Roboto', sans-serif;
-  }
-  
-  [data-theme="dark"] {
-    --primary: #1b9cfc;
-    --secondary: #f97f51;
-    --error: darkred;
-  
-    --light: #222;
-    --dark: #fff;
-    --grey: #b3b3b3;
-  
-    --primary-light: #25ccf7;
-    --secondary-light: #8bc34a;
-  }
-  
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  --primary: #1b9cfc;
+  --secondary: #f97f51;
+  --error: darkred;
+
+  --light: #ffffff;
+  --dark: #242134;
+  --grey: #b3b3b3;
+
+  --primary-light: #25ccf7;
+  --secondary-light: #8bc34a;
+
+  --primary-font: "Roboto", sans-serif;
+}
+
+[data-theme="dark"] {
+  --primary: #1b9cfc;
+  --secondary: #f97f51;
+  --error: darkred;
+
+  --light: #222;
+  --dark: #fff;
+  --grey: #b3b3b3;
+
+  --primary-light: #25ccf7;
+  --secondary-light: #8bc34a;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import "grid";
-  
-  h1,h2,h3,h4,h5,h6 {
-    margin: 0;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+* {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--primary-font);
+  background-color: var(--light);
+}
+
+button {
+  &:focus,
+  &:active {
+    outline: none;
   }
-  
-  * {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  html, body {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: var(--primary-font);
-    background-color: var(--light);
-  }
-  
-  button {
-    &:focus, &:active {
-      outline: none;
-    }
+}
+
+.btn {
+  border-radius: 45px;
+  padding: 10px 30px;
+  color: #fff;
+  color: var(--light);
+  font-family: var(--primary-font);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.28px;
+  cursor: pointer;
+  transition: all 0.35s;
+  display: inline-block;
+  border: 2px solid transparent;
+  margin-right: 5px;
+  background-color: #1b9cfc;
+  background-color: var(--primary);
+  text-decoration: none;
+  &:hover {
+    background-color: var(--secondary);
   }
 
-  .btn {
-    border-radius: 45px;
-    padding: 10px 30px;
-    color: #fff;
-    color: var(--light);
-    font-family: var(--primary-font);
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: .28px;
-    cursor: pointer;
-    transition: all .35s;
-    display: inline-block;
-    border: 2px solid transparent;
-    margin-right: 5px;
-    background-color: #1b9cfc;
-    background-color: var(--primary);
-    text-decoration: none;
+  @media (max-width: 991px) {
+    padding: 7px 21px;
+  }
+
+  &.reverse {
+    background-color: var(--secondary);
     &:hover {
-        background-color: var(--secondary);
-    }
-
-    @media (max-width: 991px) {
-      padding: 7px 21px;
-    }
-
-    &.reverse {
-      background-color: var(--secondary);
-      &:hover {
-        background-color: var(--primary);
-      }
+      background-color: var(--primary);
     }
   }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .t-light {
-    color: var(--light);
-  }
-  
-  .t-grey {
-    color: var(--grey);
-  }
-  
-  .t-center {
-    text-align: center;
-  }
-  
-  .h-100vh {
-    min-height: 100vh;
-  }
-  
-  .container {
-    max-width: 1200px;
-  }
-  
-  .app {
-    overflow-y: hidden;
-  }
-  
+}
 
-  @import './components/navigation';
-  @import './components/banner';
-  @import './components/features';
-  @import './components/cta';
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.t-light {
+  color: var(--light);
+}
+
+.t-grey {
+  color: var(--grey);
+}
+
+.t-center {
+  text-align: center;
+}
+
+.h-100vh {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.app {
+  overflow-y: hidden;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+@import "./components/navigation";
+@import "./components/banner";
+@import "./components/features";
+@import "./components/cta";
+@import "./components/footer";

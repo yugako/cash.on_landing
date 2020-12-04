@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Banner from '../components/Banner';
 import CallToAction from '../components/CallToAction';
 import Features from '../components/Features';
+import { Footer } from '../components/Footer';
 
 import Navigation from '../components/Navigation';
 
@@ -27,14 +28,14 @@ export default function Home() {
   return (
     <div className='app'>
       <Head>
-        <title>Create Next App</title>
+        <title>Cash.On - Manage your money easy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navigation />
       <Banner />
       <Features features={features} />
-      <CallToAction />
+      <Footer />
     </div>
   )
 }
